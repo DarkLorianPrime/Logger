@@ -1,6 +1,6 @@
 import os
 import time
-
+import traceback
 
 def logger(info=None):
     rw = open(f'{os.getcwd()}/Logs.log', 'a+')
@@ -17,7 +17,8 @@ def logger(info=None):
                 rw.write(f'{time.strftime("/%H:%M:%S/")} [LOADED] {fn.__name__} successful execute. \n')
             except Exception as ex:
                 returned = args
-                rw.write(f'{time.strftime("/%H:%M:%S/")} [ERROR] Loading error: {ex} \n')
+                rw.write(f'{time.strftime("/%H:%M:%S/")} [ERROR] Function {fn.__name__} Loading error: \n {ex} in \n')
+                print('Error, look at the information in the logs!\nFunction returned the original value!')
             rw.write(f'{"=" * 10}\n')
             rw.close()
             return returned
@@ -29,6 +30,8 @@ def logger(info=None):
 
 @logger('Info for logs')
 def print_lower(text):
+    d = 0 / 0
+    print(d)
     lower_text = text.lower()
     return lower_text
 
