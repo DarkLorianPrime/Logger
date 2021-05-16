@@ -12,7 +12,9 @@ def logger(info=None):
         rw.write(f'{"=" * 10}\n')
 
     def logger_dec(fn):
+
         def logger_wrap(*args):
+            returned_str = None
             rw.write(f'{"=" * 10}\n')
             try:
                 returned = fn(*args)
@@ -24,8 +26,10 @@ def logger(info=None):
                     if re.search('line', i):
                         returned_str = f'{i}'
                         break
-                rw.write(f'{time.strftime("/%H:%M:%S/")} [ERROR] Function [{fn.__name__}] Loading error: \n {ex} in {returned_str} \n')
-                print('[ERROR]Error, look at the information in the logs!\n[ERROR]Function returned the original value!')
+                rw.write(
+                    f'{time.strftime("/%H:%M:%S/")} [ERROR] Function [{fn.__name__}] Loading error: \n {ex} in {returned_str} \n')
+                print(
+                    '[ERROR]Error, look at the information in the logs!\n[ERROR]Function returned the original value!')
             rw.write(f'{"=" * 10}\n')
             rw.close()
             return returned
@@ -33,16 +37,3 @@ def logger(info=None):
         return logger_wrap
 
     return logger_dec
-
-
-@logger('Info for logs')
-def print_lower(text):
-    d = 0 / '1'
-    print(d)
-    lower_text = text.lower()
-    return lower_text
-
-
-print(print_lower('I KNOW YOU WILL SAY HI TO ME IF WE MEET AGAIN'))
-
-
