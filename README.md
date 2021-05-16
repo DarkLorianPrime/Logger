@@ -28,6 +28,6 @@ If you function works not correctly, in logs you'll get:
 /THIS IS TIME/ [INFO] Info for logs #Args in decorator
 ==========
 ==========
-/THIS IS TIME/ [ERROR] Loading error: division by zero #Error, In future, this give you number of string and name function, where happened this error
+/17:54:39/ [ERROR] Function [print_lower] Loading error: division by zero in line 18 #Error, she give you a function, line, where have error
 ==========
 ```
