@@ -21,4 +21,13 @@ In file you'll get:
 i know you will say hi to me if we meet again
 ```
 If you leave the decorator argument empty, the INFO field will not be added to the logs.
-this example
+
+If you function works not correctly, in logs you'll get:
+```
+==========
+/THIS IS TIME/ [INFO] Info for logs #Args in decorator
+==========
+==========
+/THIS IS TIME/ [ERROR] Loading error: division by zero #Error, In future, this give you number of string and name function, where happened this error
+==========
+```
