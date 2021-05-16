@@ -29,7 +29,7 @@ If you leave the decorator argument empty, the INFO field will not be added to t
 /THIS IS TIME/ [INFO] Info for logs #Args in decorator
 ==========
 ==========
-/17:54:39/ [ERROR] Function [print_lower] Loading error: division by zero in line 18 #Error, she give you a function, line, where have error
+/THIS IS TIME/ [ERROR] Function [print_lower] Loading error: division by zero in line 18 #Error, she give you a function, line, where have error
 ==========
 ```
 If args for decorator is empty - It will not return [info]
