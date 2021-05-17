@@ -34,5 +34,6 @@ If you leave the decorator argument empty, the INFO field will not be added to t
 ```
 If args for decorator is empty - It will not return [info]
 
+#I have python 3.10, with convenient traceback support. So I'll move on to this.
 [If you want to feel this code online]: https://replit.com/@DarkLorianPrime/Logger-1#main.py
 [If you want to feel this code online]
